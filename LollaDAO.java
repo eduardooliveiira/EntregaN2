@@ -13,15 +13,12 @@ public class LollaDAO {
         readFile();
     }
 
-    //Create
     public void createResultado(Resultados resultado){
         this.database.getResultados().add(resultado);
-        writeFile(0;
+        writeFile(0);
     }
-    // Read
-    public Lolla getAllLolla() (return this.database);
-
-    //Update
+    public Lolla getAllLolla(){ (return this.database);
+    }
     public void updateResultado (Resultados resultado) {
         for (int i = 0; i < this.database.getResultados().size(); i++) {
             if (this.databasegetResultados().get(i).getDate().equals(resultado.getDate())){
@@ -30,14 +27,12 @@ public class LollaDAO {
         }
         writeFile();
     }
-    // TODO:DELETE
-
-    //FUNÇÕES AUXILIARES
-    Public void readFile(){
+    
+    public void readFile(){
         System.out.println("LollaDao - Leitura dos dados do arquivo CSV");
 
         try (Scanner scanner = new Scanner(new File()),){
-            .SimpleDateFormat sdf = new SimpleDateFormat(pattern "DD-MM-AAAA");
+            SimpleDateFormat sdf = new SimpleDateFormat(pattern "DD-MM-AAAA");
 
             while (scanner.hasNextLine()){
                 String Line = scanner.nextLine();
